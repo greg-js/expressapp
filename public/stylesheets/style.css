@@ -1,0 +1,19 @@
+.review {
+  padding-bottom: 5px;
+}
+
+.panel-body.review-container {
+  padding-top: 5px;
+}
+
+.review-header {
+  margin-bottom: 4px;
+}
+
+.reviewAuthor {
+  margin: 0 4px;
+}
+
+.reviewTimestamp {
+  color: #aaa;
+}
