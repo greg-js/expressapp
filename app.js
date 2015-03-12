@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var app = express();
+require('./app_server/models/db');
 
 app.set('port', process.env.PORT || 3000);
 
@@ -26,6 +27,7 @@ require('./routes')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  'use strict';
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
@@ -37,6 +39,7 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
+    'use strict';
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -48,6 +51,7 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
+  'use strict';
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
@@ -56,6 +60,7 @@ app.use(function(err, req, res, next) {
 });
 
 http.createServer(app).listen(app.get('port'), function() {
+  'use strict';
   console.log('Express server listening on port ' + app.get('port'));
 });
 

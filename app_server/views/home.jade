@@ -1,0 +1,11 @@
+include _includes/sharedHTMLfunctions
+
+extends layout
+
+block content
+  br
+  #banner.page-header
+    .row
+      .col-lg-6
+        h1= pageHeader.title
+          small &nbsp;#{pageHeader.strapline}

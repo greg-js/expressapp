@@ -1,4 +1,5 @@
 module.exports = function(app) {
+  'use strict';
   require('./main')(app);
-  require('./locations')(app);
+  require('./home')(app);
 };
