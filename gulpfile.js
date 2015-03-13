@@ -20,3 +20,9 @@ gulp.task('styles', function() {
     .pipe(minifyCSS())
     .pipe(gulp.dest('./public/css'));
 });
+
+gulp.task('watch', function() {
+  'use strict';
+  // Watch less files
+  gulp.watch('less/**/*.less', ['styles']);
+});
