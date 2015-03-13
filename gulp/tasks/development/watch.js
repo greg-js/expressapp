@@ -2,8 +2,9 @@ var gulp = require('gulp');
 
 gulp.task('watch', function() {
   'use strict';
-  // Watch less files
+  // Compile less files
   gulp.watch('./source/less/**/*.less', ['styles']);
+
   // Lint javascript files
   gulp.watch([
       './{app,gulpfile}.js',
