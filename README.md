@@ -5,5 +5,5 @@ Simple starter project based on Simon Holmes' Getting MEAN and using Node, Expre
 
 TODO
 ----
-*Improve Gulp build process
-*Add livereload
+* Improve Gulp build process
+* Add livereload
