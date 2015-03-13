@@ -1,6 +1,15 @@
 var mongoose = require('mongoose');
 
-var dbURI = 'mongodb://localhost/expressapp';
+var dbURI = null;
+if (process.env.NODE_ENV === 'production') {
+  dbURI = 'mongodb://<username>:<password>@<hostname>:<port>/<database>';
+  // Don't use this if source code is in public repository. Use an environment variable instead such ass process.env.MONGOLAB_URI
+  console.log('Starting app in production mode...');
+}
+else {
+  dbURI = 'mongodb://localhost/expressapp';
+  console.log('Starting app in development mode...');
+}
 
 mongoose.connect(dbURI);
 
