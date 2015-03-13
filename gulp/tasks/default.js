@@ -1,7 +1,8 @@
-var gulp  = require('gulp'),
-    gutil = require('gulp-util');
+var gulp        = require('gulp'),
+    gutil       = require('gulp-util'),
+    runSequence = require('run-sequence');
 
-gulp.task('default', ['imagemin', 'watch'], function() {
+gulp.task('default', function() {
   'use strict';
-  return gutil.log('Gulp is running!');
+  runSequence('clean:styles', ['imagemin', 'watch']);
 });

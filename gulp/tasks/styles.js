@@ -8,7 +8,7 @@ var gulp         = require('gulp'),
 // less for styling
 gulp.task('styles', function() {
   'use strict';
-  return gulp.src('./source/less/**/*.less')
+  return gulp.src('./source/less/styles.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))

@@ -1,16 +1,22 @@
-var gulp = require('gulp');
+var gulp  = require('gulp'),
+    watch = require('gulp-watch');
 
 gulp.task('watch', function() {
   'use strict';
+
   // Compile less files
-  gulp.watch('./source/less/**/*.less', ['styles']);
+  watch('./source/less/**/*.less', function() {
+    gulp.start('styles');
+  });
 
   // Lint javascript files
-  gulp.watch([
+  watch([
       './{app,gulpfile}.js',
       './gulp/**/*.js',
       './app_server/**/*.js',
       './routes/**/*.js',
       './source/js/**/*.js'
-  ], ['jshint']);
+  ], function() {
+    gulp.start('jshint');
+  });
 });
