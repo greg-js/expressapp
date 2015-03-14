@@ -8,7 +8,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 else {
   dbURI = 'mongodb://localhost/expressapp';
-  console.log('Starting app in development mode...');
 }
 
 mongoose.connect(dbURI);
@@ -21,11 +20,6 @@ mongoose.connection.on('connected', function() {
 mongoose.connection.on('error', function(err) {
   'use strict';
   console.log('Mongoose connection error: ' + err);
-});
-
-mongoose.connection.on('disconnected', function() {
-  'use strict';
-  console.log('Mongoose disconnected');
 });
 
 var gracefulShutdown = function(msg, callback) {
