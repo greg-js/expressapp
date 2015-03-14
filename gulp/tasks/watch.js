@@ -22,9 +22,10 @@ gulp.task('watch', function() {
     gulp.start('jshint');
   });
 
-  // start nodemon only if not in production mode
+  // start nodemon & browser-sync only if not in production mode
   if ( process.env.NODE_ENV !== 'production' ) {
     nodemon({ script: 'app.js' });
+    gulp.start('browser-sync');
   }
 
   return gutil.log('Watching for changes...');
