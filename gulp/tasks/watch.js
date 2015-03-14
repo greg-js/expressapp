@@ -1,6 +1,7 @@
-var gulp  = require('gulp'),
-    watch = require('gulp-watch'),
-    gutil = require('gulp-util');
+var gulp    = require('gulp'),
+    watch   = require('gulp-watch'),
+    gutil   = require('gulp-util'),
+    nodemon = require('gulp-nodemon');
 
 gulp.task('watch', function() {
   'use strict';
@@ -20,6 +21,11 @@ gulp.task('watch', function() {
   ], function() {
     gulp.start('jshint');
   });
+
+  // start nodemon only if not in production mode
+  if ( process.env.NODE_ENV !== 'production' ) {
+    nodemon({ script: 'app.js' });
+  }
 
   return gutil.log('Watching for changes...');
 });
