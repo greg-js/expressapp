@@ -1,5 +1,6 @@
 var gulp  = require('gulp'),
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    gutil = require('gulp-util');
 
 gulp.task('watch', function() {
   'use strict';
@@ -19,4 +20,6 @@ gulp.task('watch', function() {
   ], function() {
     gulp.start('jshint');
   });
+
+  return gutil.log('Watching for changes...');
 });

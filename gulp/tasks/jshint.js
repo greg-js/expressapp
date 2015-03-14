@@ -1,8 +1,10 @@
 var gulp   = require('gulp'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    gutil  = require('gulp-util');
 
 gulp.task('jshint', function() {
   'use strict';
+  gutil.log('Linting JavaScript...');
 
   return gulp.src([
       './{app,gulpfile}.js',

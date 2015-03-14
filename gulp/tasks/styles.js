@@ -3,11 +3,14 @@ var gulp         = require('gulp'),
     path         = require('path'),
     autoprefixer = require('gulp-autoprefixer'),
     minifyCSS    = require('gulp-minify-css'),
-    rename       = require('gulp-rename');
+    rename       = require('gulp-rename'),
+    gutil        = require('gulp-util');
 
 // less for styling
 gulp.task('styles', function() {
   'use strict';
+
+  gutil.log('Compiling and minifying CSS...');
   return gulp.src('./source/less/styles.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
