@@ -1,4 +1,5 @@
 var gulp         = require('gulp');
+var plumber      = require('gulp-plumber');
 var less         = require('gulp-less');
 var path         = require('path');
 var autoprefixer = require('gulp-autoprefixer');
@@ -13,6 +14,7 @@ gulp.task('styles', function() {
 
   gutil.log('Compiling and minifying CSS...');
   return gulp.src('./source/less/styles.less')
+    .pipe(plumber())
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
