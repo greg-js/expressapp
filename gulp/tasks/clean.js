@@ -1,6 +1,6 @@
-var gulp  = require('gulp'),
-    del   = require('del'),
-    gutil = require('gulp-util');
+var gulp  = require('gulp');
+var del   = require('del');
+var gutil = require('gulp-util');
 
 gulp.task('clean:styles', function() {
   'use strict';

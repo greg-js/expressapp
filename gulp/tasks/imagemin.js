@@ -1,7 +1,7 @@
-var gulp     = require('gulp'),
-    changed  = require('gulp-changed'),
-    imagemin = require('gulp-imagemin'),
-    gutil    = require('gulp-util');
+var gulp     = require('gulp');
+var changed  = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
+var gutil    = require('gulp-util');
 
 // minify new images
 gulp.task('imagemin', function() {

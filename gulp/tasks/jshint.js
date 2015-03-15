@@ -1,6 +1,6 @@
-var gulp   = require('gulp'),
-    jshint = require('gulp-jshint'),
-    gutil  = require('gulp-util');
+var gulp   = require('gulp');
+var jshint = require('gulp-jshint');
+var gutil  = require('gulp-util');
 
 gulp.task('jshint', function() {
   'use strict';

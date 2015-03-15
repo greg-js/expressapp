@@ -1,7 +1,6 @@
-var gulp    = require('gulp'),
-    watch   = require('gulp-watch'),
-    gutil   = require('gulp-util'),
-    nodemon = require('gulp-nodemon');
+var gulp  = require('gulp');
+var watch = require('gulp-watch');
+var gutil = require('gulp-util');
 
 gulp.task('watch', function() {
   'use strict';
@@ -21,12 +20,6 @@ gulp.task('watch', function() {
   ], function() {
     gulp.start('jshint');
   });
-
-  // start nodemon & browser-sync only if not in production mode
-  if ( process.env.NODE_ENV !== 'production' ) {
-    nodemon({ script: 'app.js' });
-    gulp.start('browser-sync');
-  }
 
   return gutil.log('Watching for changes...');
 });

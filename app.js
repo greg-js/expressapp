@@ -1,15 +1,15 @@
-var express = require('express');
-var http = require('http');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
+var express      = require('express');
+var http         = require('http');
+var path         = require('path');
+var favicon      = require('serve-favicon');
+var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var bodyParser   = require('body-parser');
 
 var app = express();
 require('./app_server/models/db');
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 9999);
 
 // view engine setup
 app.set('views', path.join(__dirname, '/app_server/views'));
