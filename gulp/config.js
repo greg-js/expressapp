@@ -17,5 +17,19 @@ module.exports = {
     ext: 'js html jade',
     env: { 'NODE_ENV': 'development' },
     script: 'app.js'
+  },
+  browserify: {
+    // Enable source maps
+    debug: true,
+    // Separate bundle will be generated for each bundle config below
+    bundleConfigs: [{
+      entries     : './source/js/application.js',
+      dest        : 'public/js',
+      outputName  : 'application.js'
+    }, {
+      entries     : './source/js/head.js',
+      dest        : 'public/js',
+      outputName  : 'head.js'
+    }]
   }
 };

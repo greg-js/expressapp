@@ -4,5 +4,10 @@ var runSequence = require('run-sequence');
 
 gulp.task('default', function() {
   'use strict';
-  runSequence('clean:styles', 'styles', ['imagemin', 'browser-sync', 'watch']);
+  runSequence(
+    'clean',
+    'styles',
+    'scripts',
+    ['imagemin', 'browser-sync', 'watch']
+  );
 });
