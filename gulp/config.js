@@ -12,5 +12,10 @@ module.exports = {
   autoprefixer: {
     browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'Opera 12.1', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'],
     cascade: true
+  },
+  nodemon: {
+    ext: 'js html jade',
+    env: { 'NODE_ENV': 'development' },
+    script: 'app.js'
   }
 };
