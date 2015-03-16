@@ -34,9 +34,11 @@ npm-debug.log
 .bower-registry/
 
 # less
-public/css/styles.css
-public/css/styles.min.css
+public/css/
 builtAssets/
+
+# browserify
+public/js/
 
 # config
 env.json
