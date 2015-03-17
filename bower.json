@@ -1,0 +1,26 @@
+{
+  "name": "expressapp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wdgreg/expressapp",
+  "authors": [
+    "Gregory Scheerlinck <gregory.scheerlinck@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "modernizr": "~2.8.3"
+  }
+}

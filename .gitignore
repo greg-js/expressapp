@@ -40,6 +40,9 @@ builtAssets/
 # browserify
 public/js/
 
+# bower
+public/lib/
+
 # config
 env.json
 .env

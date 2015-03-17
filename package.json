@@ -19,9 +19,23 @@
     "jade": "1.6.x",
     "mongoose": "3.8.x"
   },
+  "browser": {
+    "modernizr": "./public/lib/modernizr/modernizr.js",
+    "jquery": "./public/lib/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "modernizr": "Modernizr",
+    "jquery": "$"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
   "devDependencies": {
     "browser-sync": "^2.2.3",
     "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.3",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
