@@ -18,7 +18,7 @@ gulp.task('watch', function() {
       './routes/**/*.js',
       './source/js/**/*.js'
   ], function() {
-    gulp.start('jshint');
+    gulp.start(['jshint', 'scripts']);
   });
 
   return gutil.log('Watching for changes...');

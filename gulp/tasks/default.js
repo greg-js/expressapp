@@ -5,9 +5,9 @@ var runSequence = require('run-sequence');
 gulp.task('default', function() {
   'use strict';
   runSequence(
-    'clean',
     'styles',
     'scripts',
+    'nodemon',
     ['imagemin', 'browser-sync', 'watch']
   );
 });

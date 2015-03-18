@@ -4,7 +4,7 @@ var config      = require('../config');
 
 // Start browser-sync server
 
-gulp.task('browser-sync', ['nodemon'], function() {
+gulp.task('browser-sync', function() {
   'use strict';
 
   // start nodemon & browser-sync only if not in production mode
