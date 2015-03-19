@@ -7,7 +7,8 @@ module.exports = {
       'app_server/**/*.{jade,js}',
       'routes/**/*.js',
       'app.js'
-    ]
+    ],
+    reloadDelay: 1500
   },
   autoprefixer: {
     browsers: ['last 2 versions', '> 1%', 'Firefox ESR', 'Opera 12.1', 'safari 5', 'ie 8', 'ie 9', 'ios 6', 'android 4'],
@@ -30,6 +31,10 @@ module.exports = {
       entries     : './source/js/head.js',
       dest        : 'public/js',
       outputName  : 'head.js'
+    }, {
+      entries     : './source/js/home.js',
+      dest        : 'public/js',
+      outputName  : 'home.js'
     }]
   }
 };

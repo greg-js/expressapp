@@ -18,7 +18,12 @@ gulp.task('watch', function() {
       './routes/**/*.js',
       './source/js/**/*.js'
   ], function() {
-    gulp.start(['jshint', 'scripts']);
+    gulp.start('jshint');
+  });
+
+  // Compile javascript files
+  watch('./source/js/**/*.js', function() {
+    gulp.start('scripts');
   });
 
   return gutil.log('Watching for changes...');
