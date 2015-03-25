@@ -7,6 +7,7 @@ var minifyCSS    = require('gulp-minify-css');
 var rename       = require('gulp-rename');
 var gutil        = require('gulp-util');
 var config       = require('../config');
+var browsersync  = require('browser-sync');
 
 // less for styling
 gulp.task('styles', function() {
@@ -22,5 +23,6 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./public/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css'))
+    .pipe(browsersync.reload({ stream: true }));
 });
