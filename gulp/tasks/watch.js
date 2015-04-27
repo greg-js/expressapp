@@ -1,6 +1,7 @@
-var gulp  = require('gulp');
-var watch = require('gulp-watch');
-var gutil = require('gulp-util');
+var gulp        = require('gulp');
+var watch       = require('gulp-watch');
+var gutil       = require('gulp-util');
+var browsersync = require('browser-sync');
 
 gulp.task('watch', function() {
   'use strict';
@@ -8,6 +9,11 @@ gulp.task('watch', function() {
   // Compile less files
   watch('./source/less/**/*.less', function() {
     gulp.start('styles');
+  });
+
+  // Reload browser on change in compiled css
+  watch('./public/css/**/*.css', function() {
+    browsersync.reload();
   });
 
   // Lint javascript files

@@ -2,7 +2,7 @@ module.exports = {
   browsersync: {
     development: {
       proxy: 'localhost:9999',
-      reloadDelay: 1000
+      reloadDelay: 1500
     },
     production: {
       server: {
